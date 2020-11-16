@@ -1,11 +1,10 @@
 pragma solidity 0.5.12;
 
 import "./Ownable.sol";
-import "./Destroyable.sol"
-import "./provableAPI.sol"
-import "./SafeMath.sol"
+import "./Destroyable.sol";
+import "./provableAPI.sol";
+import "./SafeMath.sol";
 
-// import "../SignedSafeMath.sol"
 
 // Import SafeMath library from github (this import only works on Remix).
 // import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v2.5.0/contracts/math/SafeMath.sol";
@@ -189,6 +188,7 @@ contract CoinToss is Ownable, usingProvable, Destroyable {
     msg.sender.transfer(toTransfer);
     return toTransfer;
   }
+}
 //   function testRandom() private returns (bytes32){
 //     bytes32 queryId = bytes32(keccak256(abi.encodePacked(msg.sender)));
 //     __callback(queryId, "1", bytes("test"));
@@ -200,4 +200,4 @@ contract CoinToss is Ownable, usingProvable, Destroyable {
 // 		uint8 result = uint8(firstRes.mod(251));
 // 		return result;
 //     }
-}
+
